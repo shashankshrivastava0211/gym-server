@@ -58,8 +58,31 @@ const loginController = async (req, res) => {
     res.status(500).send("Internal server error: " + err.message);
   }
 };
+// const forgetPasswordController = async (req, res) => {
+//   try {
+//     const { email } = req.body;
+//     const user = await User.findOne({ email });
+//     if (!user) {
+//       throw new Error("User not found");
+//     }
+//     const token = jwt.sign({ _id: user._id }, "bllps5830F", {
+//       expiresIn: "7d",
+//     });
+//     res.cookie("token", token, {
+//       httpOnly: true,
+//     });
+//     res.status(200).json({
+//       success: true,
+//       message: "User logged in successfully",
+//       data: user,
+//     });
+//   } catch (err) {
+//     res.status(500).send("Internal server error: " + err.message);
+//   }
+// };
 
 module.exports = {
   signupController,
   loginController,
+  //   forgetPasswordController,
 };
