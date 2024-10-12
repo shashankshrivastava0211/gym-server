@@ -21,6 +21,6 @@ const authRouter = require("./routes/authRoutes");
 app.use("/api", authRouter);
 app.use(".api", authRouter);
 
-app.listen(3000, () => {
-  console.log("Server running on port 3000");
+app.listen(1717, () => {
+  console.log("Server running on port 1717");
 });
