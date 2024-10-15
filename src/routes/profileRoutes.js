@@ -1,6 +1,9 @@
-const app = require("express");
-const profileRouter = app.Router();
+const express = require("express");
 
-app.patch("/profileEdit");
+const membership = require('../controller/profileController')
+
+// app.patch("/profileEdit");
+const profileRouter = express.Router();
+// profileRouter.get('/membership',membership);
 
 module.exports = profileRouter;

@@ -31,6 +31,11 @@ const userSchema = new Schema(
       required: false, //disscuss krne k baad daalnge kitna bada form rkhna hai
       trim: true,
     },
+    photoURL:{
+      type:String,
+      required:false,
+      
+    },
     address: {
       type: String,
       //   required: true, discuss krne k baad daalnge kitna bada form rkhna hai
@@ -50,6 +55,10 @@ const userSchema = new Schema(
       type: Number,
       default: 0,
     },
+    membershipDetails:{
+      type: Schema.Types.ObjectId,
+      ref: 'Membership'
+    }
   },
   {
     timestamps: true,
